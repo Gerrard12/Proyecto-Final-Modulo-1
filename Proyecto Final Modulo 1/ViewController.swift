@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         
                     dias?.text = "Martes y Jueves"
                     horas?.text = "10:00 a 13:00"
+                    dias.isUserInteractionEnabled = false
+                    horas.isUserInteractionEnabled = false
     }
 
     override func didReceiveMemoryWarning() {
