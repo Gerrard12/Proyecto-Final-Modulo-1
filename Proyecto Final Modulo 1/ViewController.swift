@@ -10,16 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var segmentos: UISegmentedControl!
+    @IBOutlet weak var dias: UITextField!
+    @IBOutlet weak var horas: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+                    dias?.text = "Martes y Jueves"
+                    horas?.text = "10:00 a 13:00"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
+    @IBAction func btnSegmentos(_ sender: UISegmentedControl) {
+        
+        if(segmentos.selectedSegmentIndex == 0){
+
+            horas?.text = "10:00 a 13:00"
+        }
+        else{
+            horas?.text = "19:00 a 22:00"
+        }
+    }
 
 }
 
